@@ -20,6 +20,7 @@ RUN git clone https://github.com/docker/distribution.git -b ${checkout} /go/src/
     go get &&\
     make PREFIX=/go clean binaries &&\
     mkdir -p /etc/docker/registry &&\
+    cp bin/* /usr/local/bin/ &&\
     cp cmd/registry/config-dev.yml /etc/docker/registry/config.yml &&\
     cd / && rm -fr /go/src
 
