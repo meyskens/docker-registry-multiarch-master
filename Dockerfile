@@ -7,7 +7,7 @@ RUN apt-get -y install git wget tar build-essential
 ARG arch
 ARG go_arch
 ARG checkout
-ARG go_version=1.9
+ARG go_version=1.10
 
 #Install golang
 RUN wget -O -  "https://golang.org/dl/go${go_version}.linux-${go_arch}.tar.gz" | tar xzC /usr/local
